@@ -1,3 +1,6 @@
+# This is the problem discussed at the end of the Dynamic Programming Part 1 class (Part 2 on Youtube). 
+# Channel: https://www.youtube.com/channel/UCDHkPnEcrEf3B9-isB4jXIw
+
 # i and j are the true variables of recursion, grid is constant, cache
 # just gives access to the cache
 def MaxPathHelper(x, y, grid, cache):
@@ -57,6 +60,10 @@ def GetMaxPathInGridBottomUp(grid):
 	maxY = len(grid) - 1
 	maxX = len(grid[0]) - 1
  
+	# Because we know this cache will hold keys in the range O <= x <= maxX+1 and 
+	# 0 <= y <= maxY+1, we could also use a 2D array of the appropriate size instead of this
+	# more general map data structure. This would improve constant factors. That idea
+	# can also be applied to top-down solution. But here we won't do it.
 	cache = dict()
  
 	# Sometimes it's more convenient to fill base cases before going into loops.
