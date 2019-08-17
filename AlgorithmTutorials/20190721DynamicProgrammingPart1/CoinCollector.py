@@ -1,7 +1,7 @@
 # This is the problem discussed at the end of the Dynamic Programming Part 1 class (Part 2 on Youtube). 
 # Channel: https://www.youtube.com/channel/UCDHkPnEcrEf3B9-isB4jXIw
 
-# i and j are the true variables of recursion, grid is constant, cache
+# x and y are the variables of recursion, grid is constant, cache
 # just gives access to the cache
 def MaxPathHelper(x, y, grid, cache):
 	# Part 1: check if in cache, and if so return right away
